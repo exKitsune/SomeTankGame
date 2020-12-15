@@ -90,6 +90,8 @@ main_menu_label:
 	const int maxHP = 5;
 	int myHP = 5;
 	Color myTank;
+	std::vector<std::tuple<Color, int, float, float, float, float>> tankInfo;
+
 	if (isServer) {
 		myTank = Color::YELLOW;
 	}
@@ -98,10 +100,13 @@ main_menu_label:
 		x = 300;
 		y = 600;
 	}
+	tankInfo.push_back(std::make_tuple(myTank, myHP, x, y, b_angle, t_angle));
+
 	int tankHitboxRadius = 35;
 	char shot = 0;
 
-	const int rotationSpeed = 3; //degrees per frame
+	const float b_rotationSpeed = 2;
+	const float t_rotationSpeed = 2; //degrees per frame
 
 	std::chrono::steady_clock::time_point lastShotTime = std::chrono::steady_clock::now();
 	const long shootCooldown = 1500; //milliseconds
@@ -112,12 +117,10 @@ main_menu_label:
 	//commands
 	int dir[7] = { 0, 0, 0, 0, 0, 0, 0};
 
-	std::vector<std::tuple<Color, int, float, float, float, float>> tankInfo;
-	//tankInfo.push_back(std::make_tuple(Color::GREEN, 5, (int)500, (int)500, b_angle, t_angle));
-	//tankInfo.push_back(std::make_tuple(Color::YELLOW, 5, (int)x, (int)y, b_angle, t_angle));
-
 	//x, y, animation #(0-4), angle (not used here)
 	std::vector<std::tuple<float, float, int, float>> shots;
+
+	int buffer = 3; //network buffer
 
 	//lets run at 60 fps
 	while (!finished) {
@@ -212,10 +215,10 @@ main_menu_label:
 			}
 
 
-			if (dir[Command::B_LEFT]) { b_angle -= rotationSpeed; }
-			if (dir[Command::B_RIGHT]) { b_angle += rotationSpeed; }
-			if (dir[Command::T_LEFT]) { t_angle -= rotationSpeed; }
-			if (dir[Command::T_RIGHT]) { t_angle += rotationSpeed; }
+			if (dir[Command::B_LEFT]) { b_angle -= b_rotationSpeed; t_angle -= b_rotationSpeed; }
+			if (dir[Command::B_RIGHT]) { b_angle += b_rotationSpeed; t_angle += b_rotationSpeed; }
+			if (dir[Command::T_LEFT]) { t_angle -= t_rotationSpeed; }
+			if (dir[Command::T_RIGHT]) { t_angle += t_rotationSpeed; }
 
 			b_angle = fmod(b_angle, 360);
 			t_angle = fmod(t_angle, 360);
@@ -264,20 +267,16 @@ main_menu_label:
 
 			std::vector<std::pair<int, int>> otherTankCenters;
 			for (auto tank : tankInfo) {
+				//printf("%i %i %f %f %f %f\n", std::get<0>(tank), std::get<1>(tank), std::get<2>(tank), std::get<3>(tank), std::get<4>(tank), std::get<5>(tank));
 				if (std::get<0>(tank) != myTank) {
 					float ob_angle = std::get<4>(tank);
 					float ox_factor = cos(ob_angle * PI / 180.0);
 					float oy_factor = sin(ob_angle * PI / 180.0);
 					int otankCenterX = std::get<2>(tank) + 40 - 10 * ox_factor;
 					int otankCenterY = std::get<3>(tank) + 50 - 10 * oy_factor;
-					otherTankCenters.push_back(std::make_pair(otankCenterX, otankCenterX));
+					otherTankCenters.push_back(std::make_pair(otankCenterX, otankCenterY));
 				}
 			}
-			for (std::pair<int, int> otank : otherTankCenters) {
-				printf("%f %f %i %i\n", x, y, otank.first, otank.second);
-			}
-
-
 
 			for (int i = tankCenterX - tankHitboxRadius; i < tankCenterX + tankHitboxRadius; i++) {
 				for (int j = tankCenterY - tankHitboxRadius; j < tankCenterY + tankHitboxRadius; j++) {
@@ -357,7 +356,7 @@ main_menu_label:
 			}
 		}
 
-		tankInfo.clear();
+		//tankInfo.clear();
 
 		if (!isServer) {
 			// color int
@@ -393,7 +392,7 @@ main_menu_label:
 			//printf("tank sent\n");
 		}
 
-		if (isServer) {
+		if (isServer && buffer == 0) {
 			Color r_Color;
 			int r_HP;
 			float r_X;
@@ -441,14 +440,31 @@ main_menu_label:
 			if (r_shot) {
 				shots.push_back(std::make_tuple(r_turretCenterX + 60 * r_sx_factor, r_turretCenterY + 60 * r_sy_factor, 0, r_T_angle));
 			}
-			std::tuple<Color, int, float, float, float, float> r_tank = std::make_tuple(r_Color, r_HP, r_X, r_Y, r_B_angle, r_T_angle);
-			tankInfo.push_back(r_tank);
+			//std::tuple<Color, int, float, float, float, float> r_tank = std::make_tuple(r_Color, r_HP, r_X, r_Y, r_B_angle, r_T_angle);
+
+			std::vector<std::tuple<Color, int, float, float, float, float>> updatedTanks;
+
+			bool inTankInfo = false;
+			for (auto tank : tankInfo) {
+				if (std::get<0>(tank) == r_Color) {
+					inTankInfo = true;
+					std::tuple<Color, int, float, float, float, float> temp = std::make_tuple(r_Color, std::get<1>(tank), r_X, r_Y, r_B_angle, r_T_angle);
+					updatedTanks.push_back(temp);
+				}
+				else {
+					updatedTanks.push_back(tank);
+				}
+			}
+			if (!inTankInfo)
+				updatedTanks.push_back(std::make_tuple(r_Color, r_HP, r_X, r_Y, r_B_angle, r_T_angle));
+			tankInfo = updatedTanks;
+			//tankInfo.push_back(r_tank);
 
 			//printf("tank received\n");
 		}
 
 		if (isServer) {
-			tankInfo.push_back(std::make_tuple(myTank, myHP, x, y, b_angle, t_angle));
+			//tankInfo.push_back(std::make_tuple(myTank, myHP, x, y, b_angle, t_angle));
 
 			if (shot) {
 				//x, y, animation #(0-4), angle
@@ -731,7 +747,7 @@ main_menu_label:
 				}
 			}
 		}
-		else {
+		else if (buffer == 0) {
 			//client
 			//get shots
 			{
@@ -1042,14 +1058,19 @@ main_menu_label:
 		std::string fps_string = std::to_string(fps);
 		GameWindow.update(Map.getLoc(), Map.getSize(), Map.getW(), Map.getH(), myTank, tankInfo, shots, maxHP, fps_string, Map.getHealthKits(), Map.getLandmines());
 
-		int remainHP = 0;
-		for (auto tank : tankInfo) {
-			if (myTank != std::get<0>(tank)) {
-				remainHP += std::get<1>(tank);
+		if (buffer == 0) {
+			int remainHP = 0;
+			for (auto tank : tankInfo) {
+				if (myTank != std::get<0>(tank)) {
+					remainHP += std::get<1>(tank);
+				}
+			}
+			if (myHP == 0 || remainHP == 0) {
+				finished = true;
 			}
 		}
-		if (myHP == 0 || remainHP == 0) {
-			finished = true;
+		else {
+			buffer--;
 		}
 	}
 
@@ -1070,8 +1091,10 @@ main_menu_label:
 			else if (e.type == SDL_KEYDOWN) {
 				auto keyCode = e.key.keysym.sym;
 				switch (keyCode) {
-				default:
+				case SDLK_ESCAPE:
 					inMM = false;
+					break;
+				default:
 					break;
 				}
 			}
