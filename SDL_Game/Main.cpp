@@ -29,7 +29,6 @@ int main(int argc, char** argv) {
 	case 'c':
 	case 'C':
 		printf("Please enter server address\n");
-		printf("For example > fruit.qc.to\n");
 		printf(">> ");
 		std::cin >> address;
 		ConnectSocket = setupClient(address);
