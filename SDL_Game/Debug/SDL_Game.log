@@ -1,0 +1,122 @@
+﻿  Main.cpp
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(129,22): warning C4244: '=': conversion from 'float' to 'UINT', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(130,22): warning C4244: '=': conversion from 'float' to 'UINT', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(139,12): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(140,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(142,29): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(142,42): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(149,44): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(149,74): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(164,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(166,54): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(166,89): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(173,23): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(175,62): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(175,97): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(187,44): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(187,73): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(210,40): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(210,66): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(216,40): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(216,66): warning C4838: conversion from 'UINT' to 'int' requires a narrowing conversion
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(16,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(88,33): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(196,40): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(204,40): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(211,40): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(220,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(221,18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(225,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(226,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(247,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(248,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(269,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(270,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(271,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(272,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(435,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(436,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(438,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(439,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(455,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(456,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(458,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(459,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(467,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(468,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(474,28): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(474,22): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(489,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(490,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(1033,82): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(1041,82): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(77,5): warning C4065: switch statement contains 'default' but no 'case' labels
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(1078,5): warning C4065: switch statement contains 'default' but no 'case' labels
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Main.cpp(62,16): warning C4102: 'main_menu_label': unreferenced label
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(163,47): warning C4244: 'initializing': conversion from 'const float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(234): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<const float&>(_Other)' being compiled
+          with
+          [
+              _This=int,
+              _Other=const float &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(234): message : see reference to function template instantiation 'std::_Tuple_val<_This>::_Tuple_val<const float&>(_Other)' being compiled
+          with
+          [
+              _This=int,
+              _Other=const float &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(815): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<std::_Exact_args_t,const float&,const float&,const int&,const float&,0>(_Tag,_This2,const float &,const int &,const float &)' being compiled
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=const float &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(815): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<std::_Exact_args_t,const float&,const float&,const int&,const float&,0>(_Tag,_This2,const float &,const int &,const float &)' being compiled
+          with
+          [
+              _Tag=std::_Exact_args_t,
+              _This2=const float &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(241): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<std::_Unpack_tuple_t,const _Ty&,0,1,2,3,0>(_Tag,_Tpl,std::integer_sequence<size_t,0,1,2,3>)' being compiled
+          with
+          [
+              _Ty=std::tuple<float,float,int,float>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=const std::tuple<float,float,int,float> &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(241): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<std::_Unpack_tuple_t,const _Ty&,0,1,2,3,0>(_Tag,_Tpl,std::integer_sequence<size_t,0,1,2,3>)' being compiled
+          with
+          [
+              _Ty=std::tuple<float,float,int,float>,
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=const std::tuple<float,float,int,float> &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(344): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float,int,float>&,0>(_Tag,_Tpl)' being compiled
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=const std::tuple<float,float,int,float> &
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include\tuple(344): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<std::_Unpack_tuple_t,const std::tuple<float,float,int,float>&,0>(_Tag,_Tpl)' being compiled
+          with
+          [
+              _Tag=std::_Unpack_tuple_t,
+              _Tpl=const std::tuple<float,float,int,float> &
+          ]
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(185): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<float,float,int,float,0>(const std::tuple<float,float,int,float> &) noexcept' being compiled
+C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\SDL_Game\Draw.h(185): message : see reference to function template instantiation 'std::tuple<int,int,int,float>::tuple<float,float,int,float,0>(const std::tuple<float,float,int,float> &) noexcept' being compiled
+  SDL_Game.vcxproj -> C:\Users\fruit\Documents\MEGA\College\Fall 2020\GAME 140\SDL_Game\Debug\SDL_Game.exe
+  0 File(s) copied
